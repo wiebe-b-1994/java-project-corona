@@ -21,7 +21,16 @@
           name="description"
         />
       </div>
-  
+      <div class="form-group">
+        <label for="price">Price</label>
+        <input
+          type="text"
+          class="form-control"
+          id="price"
+          [(ngModel)]="currentProduct.price"
+          name="price"
+        />
+      </div> 
       <div class="form-group">
         <label><strong>Status:</strong></label>
         {{ currentProduct.published ? "Published" : "Pending" }}

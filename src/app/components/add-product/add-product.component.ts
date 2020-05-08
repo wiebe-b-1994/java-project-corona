@@ -10,6 +10,7 @@ export class AddProductComponent implements OnInit {
   product = {
     title: '',
     description: '',
+    price: '',
     published: false
   };
   submitted = false;
@@ -22,7 +23,8 @@ export class AddProductComponent implements OnInit {
   saveProduct() {
     const data = {
       title: this.product.title,
-      description: this.product.description
+      description: this.product.description,
+      price: this.product.price
     };
 
     this.productService.create(data)
@@ -41,6 +43,7 @@ export class AddProductComponent implements OnInit {
     this.product = {
       title: '',
       description: '',
+      price: '',
       published: false
     };
   }
