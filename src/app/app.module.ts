@@ -17,13 +17,18 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
+
+import {CdkTableModule} from '@angular/cdk/table';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddProductComponent,
     ProductDetailsComponent,
-    ProductListComponent
+    ProductListComponent,
+    ShoppingCartComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +41,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatToolbarModule,
     MatCardModule,
     MatGridListModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    CdkTableModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

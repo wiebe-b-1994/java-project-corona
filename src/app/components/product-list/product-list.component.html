@@ -20,7 +20,7 @@
     </div>
 
     <div class="col-md-6">
-      <h4>Product list</h4>
+      <h2>Product list</h2>
 
       <div fxLayout='row' fxLayoutWrap class="cards">
         <div fxFlex="20" class="example-card" 
@@ -34,13 +34,15 @@
             </mat-card-header>
             <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
             <mat-card-content>
+              <p style="color:black"><s>
+                € {{product.price*1.15}}</s> (15% off)
+              </p>
               <p style="color:red">
-                € {{product.price}},-
+                € {{product.price}}
               </p>
             </mat-card-content>
             <mat-card-actions>
-              <button><a href="/products/{{ currentProduct.id }}">Edit</a></button>
-              <button mat-button>Add to Cart</button>
+              <button><a href="/products/{{ currentProduct.id }}">Details</a></button>
             </mat-card-actions>
           </mat-card>
         </div>

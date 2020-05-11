@@ -1,0 +1,25 @@
+<div class="shop-cart">
+
+<h1>Shopping Cart </h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Product</th>
+        <th scope="col">Items</th>
+        <th scope="col">Subtotal</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products; let i = index">
+        <td scope="row">{{product.title}}</td>
+        <td>{{product.items}}</td>
+        <td>€ {{product.price * product.items}}</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="example-button-row">
+    <button><a mat-raised-button color="primary" href="https://ing.com/">PAY</a></button>
+  </div>
+</div>

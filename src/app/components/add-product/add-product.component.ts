@@ -11,7 +11,7 @@ export class AddProductComponent implements OnInit {
     title: '',
     description: '',
     price: '',
-    published: false
+    items: ''
   };
   submitted = false;
 
@@ -24,7 +24,8 @@ export class AddProductComponent implements OnInit {
     const data = {
       title: this.product.title,
       description: this.product.description,
-      price: this.product.price
+      price: this.product.price,
+      items: this.product.items
     };
 
     this.productService.create(data)
@@ -44,7 +45,7 @@ export class AddProductComponent implements OnInit {
       title: '',
       description: '',
       price: '',
-      published: false
+      items: ''
     };
   }
 }

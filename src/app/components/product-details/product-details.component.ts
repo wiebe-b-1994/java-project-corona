@@ -33,17 +33,17 @@ export class ProductDetailsComponent implements OnInit {
         });
   }
 
+
+
   updatePublished(status) {
     const data = {
       title: this.currentProduct.title,
       description: this.currentProduct.description,
-      published: status
     };
 
     this.productService.update(this.currentProduct.id, data)
       .subscribe(
         response => {
-          this.currentProduct.published = status;
           console.log(response);
         },
         error => {
